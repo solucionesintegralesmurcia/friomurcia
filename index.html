@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Frío Murcia — Reparación de frío industrial y maquinaria de hostelería</title>
+<meta name="description" content="Averías de cámaras frigoríficas, fabricadores de hielo y maquinaria de hostelería en toda la Región de Murcia. Contacto directo por WhatsApp, respuesta el mismo día.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#10161c;
+    --steel:#25323d;
+    --steel-line:#37444f;
+    --frost:#eef4f6;
+    --paper:#ffffff;
+    --alert:#ff5a1f;
+    --alert-dim:#c94413;
+    --cyan:#2fd8e8;
+    --text-muted:#6d7c87;
+    --text-muted-dark:#9fb0ba;
+    --radius:2px;
+    --maxw:1120px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    font-family:'IBM Plex Sans',sans-serif;
+    color:var(--ink);
+    background:var(--paper);
+    line-height:1.5;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3{
+    font-family:'Space Grotesk',sans-serif;
+    line-height:1.1;
+    margin:0;
+    letter-spacing:-0.01em;
+  }
+  a{color:inherit;}
+  .mono{font-family:'IBM Plex Mono',monospace;}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px;}
+  .visually-hidden{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);}
+
+  /* ---------- HEADER ---------- */
+  header{
+    position:sticky;top:0;z-index:50;
+    background:rgba(16,22,28,0.94);
+    backdrop-filter:blur(6px);
+    border-bottom:1px solid var(--steel-line);
+  }
+  .nav{
+    display:flex;align-items:center;justify-content:space-between;
+    height:64px;
+  }
+  .logo{
+    font-family:'Space Grotesk',sans-serif;
+    font-weight:700;font-size:19px;color:var(--paper);
+    text-decoration:none;display:flex;align-items:baseline;gap:2px;
+  }
+  .logo span{color:var(--cyan);}
+  .nav-links{display:none;gap:28px;list-style:none;margin:0;padding:0;}
+  .nav-links a{
+    color:var(--text-muted-dark);text-decoration:none;font-size:14.5px;font-weight:500;
+    transition:color .15s ease;
+  }
+  .nav-links a:hover{color:var(--paper);}
+  .nav-cta{
+    display:none;
+    background:var(--alert);color:#fff;text-decoration:none;
+    font-weight:600;font-size:14px;padding:9px 16px;border-radius:var(--radius);
+    border:1px solid var(--alert);
+    transition:background .15s ease;
+  }
+  .nav-cta:hover{background:var(--alert-dim);}
+  @media(min-width:820px){
+    .nav-links{display:flex;}
+    .nav-cta{display:inline-block;}
+  }
+
+  /* ---------- HERO ---------- */
+  .hero{
+    background:var(--ink);color:var(--paper);
+    padding:64px 0 56px;
+    position:relative;
+    overflow:hidden;
+  }
+  .hero-grid{
+    display:grid;grid-template-columns:1fr;gap:44px;align-items:center;
+  }
+  @media(min-width:900px){
+    .hero-grid{grid-template-columns:1.1fr 0.9fr;gap:56px;}
+  }
+  .eyebrow{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:12.5px;color:var(--cyan);
+    margin:0 0 14px;
+    display:flex;align-items:center;gap:8px;
+  }
+  .eyebrow::before{
+    content:'';width:7px;height:7px;border-radius:50%;
+    background:var(--alert);
+    animation:blink 1.6s infinite;
+    flex-shrink:0;
+  }
+  @keyframes blink{0%,100%{opacity:1;}50%{opacity:.25;}}
+  @media (prefers-reduced-motion:reduce){.eyebrow::before{animation:none;}}
+  h1{
+    font-size:clamp(30px,5.2vw,46px);
+    font-weight:700;
+    max-width:14ch;
+  }
+  .hero p.lead{
+    color:var(--text-muted-dark);
+    font-size:17px;
+    max-width:44ch;
+    margin:20px 0 32px;
+  }
+  .cta-row{display:flex;flex-wrap:wrap;gap:12px;}
+  .btn{
+    display:inline-flex;align-items:center;gap:9px;
+    font-weight:600;font-size:15px;
+    padding:14px 22px;
+    border-radius:var(--radius);
+    text-decoration:none;
+    border:1px solid transparent;
+    transition:transform .12s ease, background .15s ease;
+  }
+  .btn:active{transform:scale(0.98);}
+  .btn-primary{background:var(--alert);color:#fff;}
+  .btn-primary:hover{background:var(--alert-dim);}
+  .btn-ghost{background:transparent;color:var(--paper);border-color:var(--steel-line);}
+  .btn-ghost:hover{border-color:var(--cyan);}
+  .btn-icon{width:16px;height:16px;flex-shrink:0;}
+
+  /* control panel visual */
+  .panel{
+    background:var(--steel);
+    border:1px solid var(--steel-line);
+    border-radius:4px;
+    padding:22px;
+    font-family:'IBM Plex Mono',monospace;
+  }
+  .panel-head{
+    display:flex;justify-content:space-between;align-items:center;
+    font-size:12px;color:var(--text-muted-dark);
+    border-bottom:1px solid var(--steel-line);
+    padding-bottom:14px;margin-bottom:18px;
+    letter-spacing:0.02em;
+  }
+  .panel-dot{width:8px;height:8px;border-radius:50%;background:var(--alert);display:inline-block;margin-right:6px;}
+  .panel-temp{
+    font-size:52px;font-weight:600;color:var(--alert);
+    display:flex;align-items:flex-start;gap:4px;
+    line-height:1;
+  }
+  .panel-temp small{font-size:20px;color:var(--text-muted-dark);margin-top:6px;}
+  .panel-sub{font-size:12.5px;color:var(--text-muted-dark);margin-top:8px;}
+  .panel-bar{
+    margin-top:20px;height:6px;background:var(--ink);border-radius:3px;overflow:hidden;
+  }
+  .panel-bar-fill{
+    height:100%;width:30%;background:var(--alert);border-radius:3px;
+    transition:width 3s ease;
+  }
+  .panel-foot{
+    display:flex;justify-content:space-between;
+    margin-top:14px;font-size:11.5px;color:var(--text-muted-dark);
+  }
+
+  /* ---------- SECTION SHELLS ---------- */
+  section{padding:72px 0;}
+  .section-head{max-width:56ch;margin-bottom:40px;}
+  .section-tag{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:12.5px;color:var(--alert-dim);
+    margin:0 0 10px;font-weight:600;
+  }
+  h2{font-size:clamp(24px,3.4vw,32px);}
+  .section-head p{color:var(--text-muted);font-size:16px;margin-top:12px;}
+
+  /* ---------- SERVICES ---------- */
+  .services{background:var(--frost);}
+  .service-list{
+    display:grid;grid-template-columns:1fr;
+    border-top:1px solid #d7e1e5;
+  }
+  @media(min-width:820px){.service-list{grid-template-columns:repeat(3,1fr);}}
+  .service{
+    border-bottom:1px solid #d7e1e5;
+    border-right:1px solid #d7e1e5;
+    padding:32px 28px;
+  }
+  @media(min-width:820px){
+    .service:last-child{border-right:none;}
+  }
+  .service-num{font-family:'IBM Plex Mono',monospace;color:var(--alert-dim);font-size:13px;font-weight:600;}
+  .service h3{font-size:20px;margin:14px 0 10px;}
+  .service p{color:var(--text-muted);font-size:15px;margin:0 0 18px;}
+  .service a{
+    font-size:14px;font-weight:600;color:var(--ink);
+    text-decoration:none;border-bottom:2px solid var(--alert);
+    padding-bottom:2px;
+  }
+  .service a:hover{color:var(--alert-dim);}
+
+  /* ---------- ZONES ---------- */
+  .zones .wrap{
+    display:grid;gap:40px;
+  }
+  @media(min-width:900px){.zones .wrap{grid-template-columns:0.9fr 1.1fr;}}
+  .zone-list{
+    display:flex;flex-wrap:wrap;gap:10px;
+  }
+  .zone-pill{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:13.5px;
+    border:1px solid #d7e1e5;
+    padding:8px 14px;border-radius:20px;
+    color:var(--ink);
+  }
+
+  /* ---------- HOW IT WORKS ---------- */
+  .steps{
+    display:grid;grid-template-columns:1fr;gap:0;
+    counter-reset:step;
+  }
+  @media(min-width:820px){.steps{grid-template-columns:repeat(3,1fr);}}
+  .step{
+    padding:28px 26px 28px 0;
+    border-top:1px solid #e2e8eb;
+  }
+  @media(min-width:820px){
+    .step{border-top:none;border-left:1px solid #e2e8eb;padding-left:26px;}
+    .step:first-child{border-left:none;padding-left:0;}
+  }
+  .step-index{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:13px;color:var(--alert-dim);font-weight:600;
+    margin-bottom:10px;display:block;
+  }
+  .step h3{font-size:18px;margin-bottom:8px;}
+  .step p{color:var(--text-muted);font-size:15px;margin:0;}
+
+  /* ---------- CONTACT / CLOSING ---------- */
+  .closing{
+    background:var(--ink);color:var(--paper);
+  }
+  .closing .wrap{
+    display:grid;gap:36px;align-items:center;
+  }
+  @media(min-width:820px){.closing .wrap{grid-template-columns:1.3fr 0.7fr;}}
+  .closing h2{color:var(--paper);max-width:16ch;}
+  .closing p{color:var(--text-muted-dark);font-size:16px;max-width:42ch;margin-top:14px;}
+  .contact-card{
+    background:var(--steel);border:1px solid var(--steel-line);
+    padding:26px;border-radius:4px;
+  }
+  .contact-line{
+    display:flex;justify-content:space-between;align-items:center;
+    padding:12px 0;border-bottom:1px solid var(--steel-line);
+    font-size:14.5px;
+  }
+  .contact-line:last-child{border-bottom:none;}
+  .contact-line span:first-child{color:var(--text-muted-dark);}
+  .contact-line a{color:var(--cyan);text-decoration:none;font-weight:600;}
+
+  /* ---------- FOOTER ---------- */
+  footer{
+    background:#0b1015;color:var(--text-muted-dark);
+    padding:28px 0;font-size:13px;
+  }
+  footer .wrap{
+    display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;align-items:center;
+  }
+  footer a{color:var(--text-muted-dark);text-decoration:none;}
+  footer a:hover{color:var(--cyan);}
+  .footer-hub{
+    border:1px solid var(--steel-line);padding:6px 14px;border-radius:20px;
+    font-family:'IBM Plex Mono',monospace;font-size:12px;
+  }
+
+  /* ---------- FLOATING WHATSAPP ---------- */
+  .wa-float{
+    position:fixed;right:18px;bottom:18px;z-index:60;
+    background:#25D366;color:#fff;
+    width:56px;height:56px;border-radius:50%;
+    display:flex;align-items:center;justify-content:center;
+    text-decoration:none;
+    box-shadow:0 6px 18px rgba(0,0,0,0.28);
+    transition:transform .15s ease;
+  }
+  .wa-float:hover{transform:scale(1.06);}
+  .wa-float svg{width:28px;height:28px;}
+
+  :focus-visible{outline:2px solid var(--cyan);outline-offset:2px;}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a href="#top" class="logo">FRÍO<span>MURCIA</span></a>
+    <ul class="nav-links">
+      <li><a href="#servicios">Servicios</a></li>
+      <li><a href="#zonas">Zonas</a></li>
+      <li><a href="#como-funciona">Cómo funciona</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+    <a class="nav-cta" href="https://wa.me/34600000000?text=Hola%2C%20tengo%20una%20aver%C3%ADa%20en%20mi%20negocio%20y%20necesito%20un%20t%C3%A9cnico" target="_blank" rel="noopener">Avisar por WhatsApp</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero" style="padding-top:64px;">
+    <div class="wrap hero-grid">
+      <div>
+        <p class="eyebrow">SERVICIO DISPONIBLE HOY</p>
+        <h1>Tu cámara frigorífica no puede esperar a mañana.</h1>
+        <p class="lead">Técnicos de frío industrial y maquinaria de hostelería en toda la Región de Murcia. Cuéntanos la avería y te ponemos en contacto con el técnico más cercano, hoy mismo.</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="https://wa.me/34600000000?text=Hola%2C%20tengo%20una%20aver%C3%ADa%20y%20necesito%20un%20t%C3%A9cnico%20de%20fr%C3%ADo" target="_blank" rel="noopener">
+            <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12c0 1.85.5 3.58 1.36 5.07L2 22l5.06-1.33A9.94 9.94 0 0 0 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm0 18c-1.6 0-3.1-.43-4.4-1.18l-.32-.19-3.01.79.8-2.93-.2-.3A7.94 7.94 0 0 1 4 12c0-4.41 3.59-8 8-8s8 3.59 8 8-3.59 8-8 8zm4.4-5.9c-.24-.12-1.43-.7-1.65-.78-.22-.08-.38-.12-.54.12-.16.24-.62.78-.76.94-.14.16-.28.18-.52.06-.24-.12-1.02-.38-1.94-1.2-.72-.64-1.2-1.43-1.34-1.67-.14-.24-.02-.37.1-.49.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.3-.74-1.78-.2-.47-.4-.4-.54-.41-.14-.01-.3-.01-.46-.01-.16 0-.42.06-.64.3-.22.24-.84.82-.84 2s.86 2.32.98 2.48c.12.16 1.7 2.6 4.12 3.64.58.25 1.03.4 1.38.51.58.18 1.11.16 1.53.1.47-.07 1.43-.58 1.63-1.14.2-.56.2-1.04.14-1.14-.06-.1-.22-.16-.46-.28z"/></svg>
+            Avisar por WhatsApp
+          </a>
+          <a class="btn btn-ghost" href="tel:+34600000000">Llamar ahora</a>
+        </div>
+      </div>
+
+      <div class="panel" aria-hidden="true">
+        <div class="panel-head">
+          <span><span class="panel-dot"></span>CÁMARA · SIN SERVICIO</span>
+          <span id="clock">00:00</span>
+        </div>
+        <div class="panel-temp"><span id="temp">-18</span><small>°C</small></div>
+        <p class="panel-sub" id="panel-msg">Temperatura subiendo — riesgo para el género en curso</p>
+        <div class="panel-bar"><div class="panel-bar-fill" id="panel-bar"></div></div>
+        <div class="panel-foot">
+          <span>UMBRAL DE RIESGO: 4°C</span>
+          <span id="elapsed">00:00:00</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="services" id="servicios">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="section-tag">QUÉ RESOLVEMOS</p>
+        <h2>Tres formas de necesitarnos, tres respuestas distintas</h2>
+        <p>No todas las llamadas son iguales. Por eso separamos la urgencia del día a día de los proyectos que se planifican con calma.</p>
+      </div>
+      <div class="service-list">
+        <div class="service">
+          <span class="service-num">01</span>
+          <h3>Avería urgente</h3>
+          <p>Cámaras frigoríficas, fabricadores de hielo, vitrinas y expositores que dejan de funcionar. Te ponemos en contacto con un técnico disponible hoy mismo.</p>
+          <a href="averia-urgente.html">Ver cobertura y plazos</a>
+        </div>
+        <div class="service">
+          <span class="service-num">02</span>
+          <h3>Mantenimiento preventivo</h3>
+          <p>Revisiones periódicas que evitan la avería antes de que ocurra, y alargan la vida de tu maquinaria. Pensado para negocios que no se pueden permitir un cierre.</p>
+          <a href="mantenimiento-preventivo.html">Ver planes de revisión</a>
+        </div>
+        <div class="service">
+          <span class="service-num">03</span>
+          <h3>Instalación de proyectos</h3>
+          <p>Abres o reformas un local y necesitas montar la maquinaria de frío desde cero. Te asesoramos y coordinamos la instalación completa.</p>
+          <a href="instalacion-proyectos.html">Ver cómo funciona</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ZONES -->
+  <section id="zonas">
+    <div class="wrap">
+      <div>
+        <p class="section-tag">DÓNDE TRABAJAMOS</p>
+        <h2>Cobertura en toda la Región de Murcia</h2>
+        <p style="color:var(--text-muted);margin-top:14px;font-size:16px;">Contamos con técnicos repartidos por la Región para no depender de un único punto — si uno no puede llegar a tiempo, buscamos otro que sí pueda.</p>
+      </div>
+      <div class="zone-list">
+        <span class="zone-pill">Murcia capital</span>
+        <span class="zone-pill">Cartagena</span>
+        <span class="zone-pill">Molina de Segura</span>
+        <span class="zone-pill">Alcantarilla</span>
+        <span class="zone-pill">Cieza</span>
+        <span class="zone-pill">Lorca</span>
+        <span class="zone-pill">Mazarrón</span>
+        <span class="zone-pill">Águilas</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="services" id="como-funciona">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="section-tag">CÓMO FUNCIONA</p>
+        <h2>De la avería al técnico en tres pasos</h2>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <span class="step-index">1</span>
+          <h3>Nos cuentas qué falla</h3>
+          <p>Por WhatsApp o llamada: tipo de máquina, negocio y localidad. Sin formularios largos.</p>
+        </div>
+        <div class="step">
+          <span class="step-index">2</span>
+          <h3>Te confirmamos técnico y hora</h3>
+          <p>Buscamos el técnico disponible más cercano a tu zona y te decimos cuándo puede llegar.</p>
+        </div>
+        <div class="step">
+          <span class="step-index">3</span>
+          <h3>Reparación en tu negocio</h3>
+          <p>El técnico acude a tu local con el material necesario y te informa del presupuesto antes de actuar.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CLOSING / CONTACT -->
+  <section class="closing" id="contacto">
+    <div class="wrap">
+      <div>
+        <h2>Cuanto antes nos escribas, antes llega el técnico.</h2>
+        <p>Respondemos por WhatsApp durante el horario comercial y también fuera de él para urgencias reales.</p>
+        <div class="cta-row" style="margin-top:24px;">
+          <a class="btn btn-primary" href="https://wa.me/34600000000?text=Hola%2C%20tengo%20una%20aver%C3%ADa%20y%20necesito%20un%20t%C3%A9cnico%20de%20fr%C3%ADo" target="_blank" rel="noopener">Escribir por WhatsApp</a>
+        </div>
+      </div>
+      <div class="contact-card">
+        <div class="contact-line"><span>WhatsApp</span><a href="https://wa.me/34600000000" target="_blank" rel="noopener">600 00 00 00</a></div>
+        <div class="contact-line"><span>Teléfono</span><a href="tel:+34600000000">600 00 00 00</a></div>
+        <div class="contact-line"><span>Zona</span><span>Región de Murcia</span></div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© <span id="year"></span> Frío Murcia</span>
+    <a class="footer-hub" href="https://tuwebmurcia.es" target="_blank" rel="noopener">Un proyecto de tuwebmurcia.es</a>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/34600000000?text=Hola%2C%20tengo%20una%20aver%C3%ADa%20y%20necesito%20un%20t%C3%A9cnico%20de%20fr%C3%ADo" target="_blank" rel="noopener" aria-label="Escribir por WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12c0 1.85.5 3.58 1.36 5.07L2 22l5.06-1.33A9.94 9.94 0 0 0 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm0 18c-1.6 0-3.1-.43-4.4-1.18l-.32-.19-3.01.79.8-2.93-.2-.3A7.94 7.94 0 0 1 4 12c0-4.41 3.59-8 8-8s8 3.59 8 8-3.59 8-8 8zm4.4-5.9c-.24-.12-1.43-.7-1.65-.78-.22-.08-.38-.12-.54.12-.16.24-.62.78-.76.94-.14.16-.28.18-.52.06-.24-.12-1.02-.38-1.94-1.2-.72-.64-1.2-1.43-1.34-1.67-.14-.24-.02-.37.1-.49.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.3-.74-1.78-.2-.47-.4-.4-.54-.41-.14-.01-.3-.01-.46-.01-.16 0-.42.06-.64.3-.22.24-.84.82-.84 2s.86 2.32.98 2.48c.12.16 1.7 2.6 4.12 3.64.58.25 1.03.4 1.38.51.58.18 1.11.16 1.53.1.47-.07 1.43-.58 1.63-1.14.2-.56.2-1.04.14-1.14-.06-.1-.22-.16-.46-.28z"/></svg>
+</a>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // Panel de control: reloj real + temperatura subiendo + cronómetro de avería
+  (function(){
+    var tempEl = document.getElementById('temp');
+    var barEl = document.getElementById('panel-bar');
+    var clockEl = document.getElementById('clock');
+    var elapsedEl = document.getElementById('elapsed');
+    var msgEl = document.getElementById('panel-msg');
+    var start = Date.now();
+    var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    function pad(n){ return String(n).padStart(2,'0'); }
+
+    function tickClock(){
+      var now = new Date();
+      clockEl.textContent = pad(now.getHours()) + ':' + pad(now.getMinutes());
+      var diff = Math.floor((Date.now() - start) / 1000);
+      var h = Math.floor(diff/3600), m = Math.floor((diff%3600)/60), s = diff%60;
+      elapsedEl.textContent = pad(h) + ':' + pad(m) + ':' + pad(s);
+    }
+    tickClock();
+    setInterval(tickClock, 1000);
+
+    if(!reduced){
+      var current = -18;
+      var target = 4;
+      var step = function(){
+        if(current < target){
+          current += 1;
+          tempEl.textContent = current;
+          var pct = ((current + 18) / (target + 18)) * 100;
+          barEl.style.width = Math.min(pct, 100) + '%';
+          if(current >= target){
+            msgEl.textContent = 'Umbral de riesgo alcanzado — el género ya no se conserva';
+          }
+          setTimeout(step, 2600);
+        }
+      };
+      setTimeout(step, 1200);
+    }
+  })();
+</script>
+
+</body>
+</html>
