@@ -5,13 +5,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Mantenimiento preventivo de frío industrial en Murcia — Frío Murcia</title>
 <meta name="description" content="Contratos de mantenimiento preventivo para cámaras frigoríficas y maquinaria de hostelería en la Región de Murcia. Evita la avería antes de que ocurra.">
+<link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32.png">
+<link rel="icon" type="image/png" sizes="512x512" href="img/favicon-512.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
 <style>
   :root{
-    --ink:#10161c; --steel:#25323d; --steel-line:#37444f; --frost:#eef4f6; --paper:#ffffff;
-    --alert:#ff5a1f; --alert-dim:#c94413; --cyan:#2fd8e8;
+    --ink:#0b2a52; --steel:#163a66; --steel-line:#2c5588; --frost:#eef6fb; --paper:#ffffff;
+    --alert:#ff5a1f; --alert-dim:#c94413; --cyan:#01b8fa;
     --text-muted:#6d7c87; --text-muted-dark:#9fb0ba; --radius:2px; --maxw:1120px;
   }
   *{box-sizing:border-box;}
@@ -25,6 +27,9 @@
   .nav{display:flex;align-items:center;justify-content:space-between;height:64px;}
   .logo{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:19px;color:var(--paper);text-decoration:none;}
   .logo span{color:var(--cyan);}
+  .logo-badge{background:#fff;border-radius:8px;padding:5px 10px;display:inline-flex;align-items:center;line-height:0;}
+  .logo-badge img{height:30px;display:block;}
+  @media(min-width:820px){.logo-badge img{height:34px;}}
   .nav-links{display:none;gap:28px;list-style:none;margin:0;padding:0;}
   .nav-links a{color:var(--text-muted-dark);text-decoration:none;font-size:14.5px;font-weight:500;}
   .nav-links a:hover{color:var(--paper);}
@@ -98,7 +103,7 @@
 
 <header>
   <div class="wrap nav">
-    <a href="index.html" class="logo">FRÍO<span>MURCIA</span></a>
+    <a href="index.html" class="logo-badge" aria-label="Frío Murcia"><img src="img/logo.png" alt="Frío Murcia"></a>
     <ul class="nav-links">
       <li><a href="averia-urgente.html">Avería urgente</a></li>
       <li><a href="index.html#servicios">Servicios</a></li>
