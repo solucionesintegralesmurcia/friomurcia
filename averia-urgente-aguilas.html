@@ -132,6 +132,11 @@
   .icon-badge{width:38px;height:38px;border-radius:8px;background:rgba(11,42,82,0.06);display:inline-flex;align-items:center;justify-content:center;color:var(--alert-dim);margin-bottom:12px;}
   .icon-badge svg{width:20px;height:20px;}
   .hero .icon-badge{background:rgba(1,184,250,0.12);color:var(--cyan);}
+
+  .photo-band{position:relative;height:280px;overflow:hidden;}
+  .photo-band img{width:100%;height:100%;object-fit:cover;display:block;filter:grayscale(.25) brightness(.85);}
+  .photo-band::after{content:'';position:absolute;inset:0;background:linear-gradient(160deg, rgba(11,42,82,.65), rgba(1,184,250,.2));}
+  .photo-band .photo-tag{position:absolute;bottom:12px;left:24px;z-index:2;font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:rgba(255,255,255,.8);background:rgba(0,0,0,.35);padding:3px 8px;border-radius:20px;}
 </style>
 </head>
 <body>
@@ -174,6 +179,8 @@
       <div class="prose"><p>Águilas combina un puerto pesquero activo todo el año con una economía turística muy marcada en verano y en fechas como su famoso Carnaval, reconocido como Fiesta de Interés Turístico Internacional y Patrimonio Cultural Inmaterial. Esa mezcla de pesca y turismo hace que la hostelería local tenga picos de actividad muy distintos a lo largo del año.</p><p>Los restaurantes de pescado fresco del entorno del puerto y del paseo marítimo dependen de una cadena de frío fiable para trabajar con producto de calidad cada día, mientras que los negocios de playa concentran su facturación en pocos meses de verano.</p><p>Damos servicio tanto al núcleo urbano de Águilas como a las zonas costeras cercanas, ajustando la prioridad de respuesta según la época del año y el tipo de negocio.</p></div>
     </div>
   </section>
+
+<section class="photo-band"><img src="https://picsum.photos/id/1002/1600/500" alt="Foto de referencia — pendiente de sustituir por fotografía propia" loading="lazy"><span class="photo-tag">FOTO PROVISIONAL</span></section>
 
   <section class="alt">
     <div class="wrap">
