@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reparación de Cámaras Frigoríficas en Cartagena — Frío Murcia</title>
+<meta name="description" content="Técnicos de cámaras frigoríficas industriales y modulares en Cartagena. Compresor que no arranca, escarcha, pérdida de temperatura. Respuesta el mismo día.">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="icon" type="image/png" sizes="512x512" href="favicon-512.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#0b2a52; --steel:#163a66; --steel-line:#2c5588; --frost:#eef6fb; --paper:#ffffff;
+    --alert:#ff5a1f; --alert-dim:#c94413; --cyan:#01b8fa;
+    --text-muted:#6d7c87; --text-muted-dark:#9fb0ba; --radius:2px; --maxw:1120px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{margin:0;font-family:'IBM Plex Sans',sans-serif;color:var(--ink);background:var(--paper);line-height:1.5;-webkit-font-smoothing:antialiased;}
+  h1,h2,h3{font-family:'Space Grotesk',sans-serif;line-height:1.1;margin:0;letter-spacing:-0.01em;}
+  a{color:inherit;}
+  .mono{font-family:'IBM Plex Mono',monospace;}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px;}
+  header{position:sticky;top:0;z-index:50;background:rgba(11,42,82,0.94);backdrop-filter:blur(6px);border-bottom:1px solid var(--steel-line);}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:64px;}
+  .logo-badge{background:#fff;border-radius:8px;padding:5px 10px;display:inline-flex;align-items:center;line-height:0;}
+  .logo-badge img{height:30px;display:block;}
+  @media(min-width:820px){.logo-badge img{height:34px;}}
+  .nav-links{display:none;gap:28px;list-style:none;margin:0;padding:0;}
+  .nav-links a{color:var(--text-muted-dark);text-decoration:none;font-size:14.5px;font-weight:500;}
+  .nav-links a:hover{color:var(--paper);}
+  .nav-cta{display:none;background:var(--alert);color:#fff;text-decoration:none;font-weight:600;font-size:14px;padding:9px 16px;border-radius:var(--radius);border:1px solid var(--alert);}
+  .nav-cta:hover{background:var(--alert-dim);}
+  @media(min-width:820px){.nav-links{display:flex;}.nav-cta{display:inline-block;}}
+
+  .hero{background:var(--ink);color:var(--paper);padding:56px 0 48px;}
+  .breadcrumb{font-family:'IBM Plex Mono',monospace;font-size:12.5px;color:var(--text-muted-dark);margin-bottom:18px;}
+  .breadcrumb a{color:var(--cyan);text-decoration:none;}
+  .eyebrow{font-family:'IBM Plex Mono',monospace;font-size:12.5px;color:var(--cyan);margin:0 0 14px;display:flex;align-items:center;gap:8px;}
+  .eyebrow::before{content:'';width:7px;height:7px;border-radius:50%;background:var(--alert);animation:blink 1.6s infinite;flex-shrink:0;}
+  @keyframes blink{0%,100%{opacity:1;}50%{opacity:.25;}}
+  @media (prefers-reduced-motion:reduce){.eyebrow::before{animation:none;}}
+  h1{font-size:clamp(28px,4.6vw,42px);font-weight:700;max-width:19ch;}
+  .hero p.lead{color:var(--text-muted-dark);font-size:16.5px;max-width:52ch;margin:18px 0 30px;}
+  .cta-row{display:flex;flex-wrap:wrap;gap:12px;}
+  .btn{display:inline-flex;align-items:center;gap:9px;font-weight:600;font-size:15px;padding:14px 22px;border-radius:var(--radius);text-decoration:none;border:1px solid transparent;}
+  .btn-primary{background:var(--alert);color:#fff;}
+  .btn-primary:hover{background:var(--alert-dim);}
+  .btn-ghost{background:transparent;color:var(--paper);border-color:var(--steel-line);}
+  .btn-ghost:hover{border-color:var(--cyan);}
+  .btn-icon{width:16px;height:16px;flex-shrink:0;}
+
+  section{padding:64px 0;}
+  .section-head{max-width:60ch;margin-bottom:36px;}
+  .section-tag{font-family:'IBM Plex Mono',monospace;font-size:12.5px;color:var(--alert-dim);margin:0 0 10px;font-weight:600;}
+  h2{font-size:clamp(22px,3vw,30px);}
+  .section-head p{color:var(--text-muted);font-size:16px;margin-top:12px;}
+
+  .symptoms{background:var(--frost);}
+  .symptom-grid{display:grid;grid-template-columns:1fr;border-top:1px solid #d7e1e5;}
+  @media(min-width:700px){.symptom-grid{grid-template-columns:repeat(2,1fr);}}
+  .symptom{border-bottom:1px solid #d7e1e5;border-right:1px solid #d7e1e5;padding:24px 22px;}
+  @media(min-width:700px){.symptom:nth-child(even){border-right:none;}}
+  .symptom h3{font-size:17px;margin-bottom:8px;}
+  .symptom p{color:var(--text-muted);font-size:14.5px;margin:0;}
+
+  .types{border-top:1px solid #e2e8eb;}
+  .type-item{border-bottom:1px solid #e2e8eb;padding:22px 0;display:flex;gap:18px;align-items:baseline;flex-wrap:wrap;}
+  .type-item h3{font-size:16.5px;min-width:220px;}
+  .type-item p{color:var(--text-muted);font-size:15px;margin:0;flex:1;min-width:220px;}
+
+  .zone-list{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px;}
+  .zone-pill{font-family:'IBM Plex Mono',monospace;font-size:13.5px;border:1px solid #d7e1e5;padding:8px 14px;border-radius:20px;color:var(--ink);text-decoration:none;}
+  .zone-pill:hover{border-color:var(--cyan);}
+  .faq{border-top:1px solid #e2e8eb;}
+  .faq-item{border-bottom:1px solid #e2e8eb;padding:22px 0;}
+  .faq-item h3{font-size:16.5px;margin-bottom:8px;}
+  .faq-item p{color:var(--text-muted);font-size:15px;margin:0;}
+
+  .closing{background:var(--ink);color:var(--paper);}
+  .closing .wrap{display:grid;gap:32px;align-items:center;}
+  @media(min-width:820px){.closing .wrap{grid-template-columns:1.3fr 0.7fr;}}
+  .closing h2{color:var(--paper);max-width:18ch;}
+  .closing p{color:var(--text-muted-dark);font-size:15.5px;max-width:44ch;margin-top:12px;}
+  .contact-card{background:var(--steel);border:1px solid var(--steel-line);padding:24px;border-radius:4px;}
+  .contact-line{display:flex;justify-content:space-between;align-items:center;padding:11px 0;border-bottom:1px solid var(--steel-line);font-size:14.5px;}
+  .contact-line:last-child{border-bottom:none;}
+  .contact-line span:first-child{color:var(--text-muted-dark);}
+  .contact-line a{color:var(--cyan);text-decoration:none;font-weight:600;}
+
+  footer{background:#081b33;color:var(--text-muted-dark);padding:26px 0;font-size:13px;}
+  footer .wrap{display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;align-items:center;}
+  footer a{color:var(--text-muted-dark);text-decoration:none;}
+  footer a:hover{color:var(--cyan);}
+  .footer-hub{border:1px solid var(--steel-line);padding:6px 14px;border-radius:20px;font-family:'IBM Plex Mono',monospace;font-size:12px;}
+
+  .wa-float{position:fixed;right:18px;bottom:18px;z-index:60;background:#25D366;color:#fff;width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;text-decoration:none;box-shadow:0 6px 18px rgba(0,0,0,0.28);}
+  .wa-float svg{width:28px;height:28px;}
+  :focus-visible{outline:2px solid var(--cyan);outline-offset:2px;}
+
+  /* --- corrección de menú móvil --- */
+  .menu-toggle{display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;background:transparent;border:1px solid var(--steel-line);border-radius:6px;color:var(--paper);cursor:pointer;flex-shrink:0;}
+  .menu-toggle svg{width:20px;height:20px;}
+  @media(min-width:820px){.menu-toggle{display:none;}}
+  .nav-links{
+    display:flex;flex-direction:column;
+    position:fixed;top:64px;left:0;right:0;
+    background:var(--ink);
+    max-height:0;overflow:hidden;
+    border-bottom:1px solid var(--steel-line);
+    z-index:49;margin:0;padding:0;list-style:none;gap:0;
+    transition:max-height .25s ease;
+  }
+  .nav-links.open{max-height:420px;}
+  .nav-links a{display:block;padding:14px 24px;color:var(--text-muted-dark);text-decoration:none;font-size:15px;border-bottom:1px solid var(--steel-line);}
+  .nav-links a:hover{color:var(--paper);background:var(--steel);}
+  .nav-cta{display:inline-flex;align-items:center;background:var(--alert);color:#fff;text-decoration:none;font-weight:600;font-size:13px;padding:9px 12px;border-radius:var(--radius);border:1px solid var(--alert);white-space:nowrap;}
+  .nav-cta:hover{background:var(--alert-dim);}
+  @media(min-width:820px){
+    .nav-links{position:static;max-height:none;overflow:visible;flex-direction:row;background:transparent;border-bottom:none;gap:26px;}
+    .nav-links a{padding:0;border-bottom:none;font-size:14px;}
+    .nav-links a:hover{background:transparent;}
+    .nav-cta{font-size:14px;padding:9px 16px;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a href="index.html" class="logo-badge" aria-label="Frío Murcia"><img src="logo.png" alt="Frío Murcia"></a>
+    <ul class="nav-links">
+      <li><a href="averia-urgente.html">Avería urgente</a></li>
+      <li><a href="mantenimiento-preventivo.html">Mantenimiento</a></li>
+      <li><a href="instalacion-proyectos.html">Instalación</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+    <a class="nav-cta" href="https://wa.me/34600000000?text=Hola%2C%20mi%20c%C3%A1mara%20frigor%C3%ADfica%20no%20funciona%20y%20necesito%20un%20t%C3%A9cnico" target="_blank" rel="noopener">Avisar por WhatsApp</a>
+    <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap">
+      <p class="breadcrumb"><a href="index.html">Frío Murcia</a> / <a href="averia-urgente-cartagena.html">Avería urgente Cartagena</a> / Cámaras frigoríficas</p>
+      <p class="eyebrow">RESPUESTA EL MISMO DÍA</p>
+      <h1>Tu cámara frigorífica no enfría en Cartagena. Vamos hoy.</h1>
+      <p class="lead">Cámaras industriales y modulares, positivas y negativas. Desde el casco histórico hasta Cabezo Beaza y La Manga del Mar Menor, cuéntanos el síntoma y buscamos al técnico disponible más cercano.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="https://wa.me/34600000000?text=Hola%2C%20mi%20c%C3%A1mara%20frigor%C3%ADfica%20no%20funciona%20y%20necesito%20un%20t%C3%A9cnico" target="_blank" rel="noopener">
+          <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12c0 1.85.5 3.58 1.36 5.07L2 22l5.06-1.33A9.94 9.94 0 0 0 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm0 18c-1.6 0-3.1-.43-4.4-1.18l-.32-.19-3.01.79.8-2.93-.2-.3A7.94 7.94 0 0 1 4 12c0-4.41 3.59-8 8-8s8 3.59 8 8-3.59 8-8 8zm4.4-5.9c-.24-.12-1.43-.7-1.65-.78-.22-.08-.38-.12-.54.12-.16.24-.62.78-.76.94-.14.16-.28.18-.52.06-.24-.12-1.02-.38-1.94-1.2-.72-.64-1.2-1.43-1.34-1.67-.14-.24-.02-.37.1-.49.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.3-.74-1.78-.2-.47-.4-.4-.54-.41-.14-.01-.3-.01-.46-.01-.16 0-.42.06-.64.3-.22.24-.84.82-.84 2s.86 2.32.98 2.48c.12.16 1.7 2.6 4.12 3.64.58.25 1.03.4 1.38.51.58.18 1.11.16 1.53.1.47-.07 1.43-.58 1.63-1.14.2-.56.2-1.04.14-1.14-.06-.1-.22-.16-.46-.28z"/></svg>
+          Avisar por WhatsApp
+        </a>
+        <a class="btn btn-ghost" href="tel:+34600000000">Llamar directamente</a>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="section-head">
+        <p class="section-tag">POR QUÉ ES LA AVERÍA MÁS CARA DE IGNORAR</p>
+        <h2>Cada grado que sube cuenta</h2>
+      </div>
+      <div class="prose">
+        <p>De toda la maquinaria de un bar o restaurante, la cámara frigorífica es probablemente la pieza cuya avería sale más cara si se retrasa la reparación: no es solo el coste de arreglarla, es el género que se pierde mientras tanto. Una cámara positiva que sube de temperatura durante unas horas puede echar a perder pescado, carne o lácteos por valor de varios cientos de euros, además del riesgo sanitario de servir producto que ha roto la cadena de frío.</p>
+        <p>Por eso, en las averías de cámaras frigoríficas priorizamos la respuesta rápida por encima de casi cualquier otro tipo de aviso: sabemos que aquí el tiempo literalmente se traduce en dinero perdido, no solo en una molestia para el negocio.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="symptoms">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="section-tag">QUÉ SÍNTOMA TIENES</p>
+        <h2>Los fallos más habituales en cámaras frigoríficas</h2>
+        <p>Dinos cuál se parece más al tuyo — nos ayuda a mandarte al técnico adecuado más rápido.</p>
+      </div>
+      <div class="symptom-grid">
+        <div class="symptom"><h3>No enfría o enfría poco</h3><p>El compresor funciona pero la temperatura no baja lo suficiente, o tarda mucho en alcanzarla.</p></div>
+        <div class="symptom"><h3>El compresor no arranca</h3><p>Silencio total al conectar, o arranca y se para a los pocos segundos.</p></div>
+        <div class="symptom"><h3>Exceso de escarcha o hielo</h3><p>Acumulación de hielo en el evaporador o en las paredes que reduce el rendimiento.</p></div>
+        <div class="symptom"><h3>La puerta no cierra bien</h3><p>Gomas de estanqueidad desgastadas que dejan entrar aire caliente constantemente.</p></div>
+        <div class="symptom"><h3>Ruidos anómalos</h3><p>Vibraciones, golpeteo o zumbidos nuevos en el compresor o los ventiladores.</p></div>
+        <div class="symptom"><h3>Alarma de alta o baja presión</h3><p>El panel de control marca error o alarma y la cámara deja de funcionar.</p></div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="alt">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="section-tag">POR QUÉ EN CARTAGENA ES DISTINTO</p>
+        <h2>Puerto, industria conservera y temporada alta en el Mar Menor</h2>
+      </div>
+      <div class="prose">
+        <p>En Cartagena, la cámara frigorífica no solo trabaja para el bar de turno: buena parte del tejido hostelero de la zona portuaria depende de un suministro constante de pescado y marisco fresco, y el Polígono Industrial de Cabezo Beaza concentra obradores y mayoristas con cámaras de mayor volumen que las de un bar cualquiera.</p>
+        <p>A eso se suma la fuerte estacionalidad de La Manga del Mar Menor: en temporada alta, las cámaras trabajan al límite justo cuando más falta hace que no fallen. Por eso en Cartagena priorizamos la respuesta rápida tanto en el casco urbano como en la costa, ajustando la urgencia según la época del año.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="types">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="section-tag">TIPOS DE CÁMARA</p>
+        <h2>Trabajamos con cualquier configuración</h2>
+      </div>
+      <div class="type-item"><h3>Cámaras modulares</h3><p>Paneles prefabricados de montaje in situ, la opción más común en bares y restaurantes.</p></div>
+      <div class="type-item"><h3>Cámaras industriales</h3><p>De mayor tamaño, para mataderos, mayoristas, obradores y almacenes.</p></div>
+      <div class="type-item"><h3>Positivas (conservación)</h3><p>Entre 0°C y 8°C, para verdura, lácteos y productos frescos.</p></div>
+      <div class="type-item"><h3>Negativas (congelación)</h3><p>Por debajo de -18°C, para congelados y productos de larga conservación.</p></div>
+    </div>
+  </section>
+
+  <section class="faq">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="section-tag">DUDAS FRECUENTES</p>
+        <h2>Antes de escribirnos</h2>
+      </div>
+      <div class="faq-item">
+        <h3>¿Puedo seguir usando la cámara mientras llega el técnico?</h3>
+        <p>Depende del síntoma: si hay riesgo real para el género, te lo indicamos por WhatsApp en cuanto nos cuentes la avería.</p>
+      </div>
+      <div class="faq-item">
+        <h3>¿Reparáis cámaras de cualquier antigüedad?</h3>
+        <p>Sí, siempre que existan recambios disponibles. Si la cámara es muy antigua, el técnico te lo indicará con transparencia antes de intervenir.</p>
+      </div>
+      <div class="faq-item">
+        <h3>¿Trabajáis con cámaras de obradores y no solo de bares?</h3>
+        <p>Sí, cubrimos tanto cámaras pequeñas de bar como cámaras industriales de mayor volumen para obradores, mayoristas y colectividades.</p>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:var(--frost);" id="zonas">
+    <div class="wrap">
+      <p class="section-tag">DÓNDE LLEGAMOS</p>
+      <h2>Cobertura en toda la Región de Murcia</h2>
+      <div class="zone-list">
+        <a class="zone-pill" href="averia-urgente.html">Murcia capital</a>
+        <a class="zone-pill" href="averia-urgente-cartagena.html">Cartagena</a>
+        <a class="zone-pill" href="averia-urgente-molina-de-segura.html">Molina de Segura</a>
+        <a class="zone-pill" href="averia-urgente-alcantarilla.html">Alcantarilla</a>
+        <a class="zone-pill" href="averia-urgente-cieza.html">Cieza</a>
+        <a class="zone-pill" href="averia-urgente-lorca.html">Lorca</a>
+        <a class="zone-pill" href="averia-urgente-mazarron.html">Mazarrón</a>
+        <a class="zone-pill" href="averia-urgente-aguilas.html">Águilas</a><span class="zone-pill">Águilas</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="closing" id="contacto">
+    <div class="wrap">
+      <div>
+        <h2>Cada hora sin frío es género que se pierde.</h2>
+        <p>Escríbenos el síntoma y tu localidad, y empezamos a buscarte técnico ahora mismo.</p>
+        <div class="cta-row" style="margin-top:22px;">
+          <a class="btn btn-primary" href="https://wa.me/34600000000?text=Hola%2C%20mi%20c%C3%A1mara%20frigor%C3%ADfica%20no%20funciona%20y%20necesito%20un%20t%C3%A9cnico" target="_blank" rel="noopener">Escribir por WhatsApp</a>
+        </div>
+      </div>
+      <div class="contact-card">
+        <div class="contact-line"><span>WhatsApp</span><a href="https://wa.me/34600000000" target="_blank" rel="noopener">600 00 00 00</a></div>
+        <div class="contact-line"><span>Teléfono</span><a href="tel:+34600000000">600 00 00 00</a></div>
+        <div class="contact-line"><span>Zona</span><span>Cartagena y Costa Cálida</span></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© <span id="year"></span> Frío Murcia</span>
+    <a class="footer-hub" href="https://tuwebmurcia.es" target="_blank" rel="noopener">Un proyecto de tuwebmurcia.es</a>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/34600000000?text=Hola%2C%20mi%20c%C3%A1mara%20frigor%C3%ADfica%20no%20funciona%20y%20necesito%20un%20t%C3%A9cnico" target="_blank" rel="noopener" aria-label="Escribir por WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12c0 1.85.5 3.58 1.36 5.07L2 22l5.06-1.33A9.94 9.94 0 0 0 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm0 18c-1.6 0-3.1-.43-4.4-1.18l-.32-.19-3.01.79.8-2.93-.2-.3A7.94 7.94 0 0 1 4 12c0-4.41 3.59-8 8-8s8 3.59 8 8-3.59 8-8 8zm4.4-5.9c-.24-.12-1.43-.7-1.65-.78-.22-.08-.38-.12-.54.12-.16.24-.62.78-.76.94-.14.16-.28.18-.52.06-.24-.12-1.02-.38-1.94-1.2-.72-.64-1.2-1.43-1.34-1.67-.14-.24-.02-.37.1-.49.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.3-.74-1.78-.2-.47-.4-.4-.54-.41-.14-.01-.3-.01-.46-.01-.16 0-.42.06-.64.3-.22.24-.84.82-.84 2s.86 2.32.98 2.48c.12.16 1.7 2.6 4.12 3.64.58.25 1.03.4 1.38.51.58.18 1.11.16 1.53.1.47-.07 1.43-.58 1.63-1.14.2-.56.2-1.04.14-1.14-.06-.1-.22-.16-.46-.28z"/></svg>
+</a>
+
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+
+<script>
+(function(){
+  var btn = document.querySelector('.menu-toggle');
+  var menu = document.querySelector('.nav-links');
+  if(btn && menu){
+    btn.addEventListener('click', function(){
+      var isOpen = menu.classList.toggle('open');
+      btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+    menu.querySelectorAll('a').forEach(function(link){
+      link.addEventListener('click', function(){ menu.classList.remove('open'); });
+    });
+  }
+})();
+</script>
+</body>
+</html>
