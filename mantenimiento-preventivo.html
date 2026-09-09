@@ -122,6 +122,13 @@
     .nav-links a:hover{background:transparent;}
     .nav-cta{font-size:14px;padding:9px 16px;}
   }
+
+  .hero-grid{display:grid;grid-template-columns:1fr;gap:32px;align-items:center;}
+  @media(min-width:900px){.hero-grid{grid-template-columns:1.15fr 0.85fr;gap:44px;}}
+  .hero-photo{position:relative;border-radius:6px;overflow:hidden;min-height:220px;background:var(--steel);}
+  .hero-photo img{width:100%;height:100%;object-fit:cover;display:block;filter:grayscale(.25) brightness(.9);}
+  .hero-photo::after{content:'';position:absolute;inset:0;background:linear-gradient(160deg, rgba(11,42,82,.6), rgba(1,184,250,.2));}
+  .hero-photo .photo-tag{position:absolute;bottom:10px;left:12px;z-index:2;font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:rgba(255,255,255,.75);background:rgba(0,0,0,.35);padding:3px 8px;border-radius:20px;}
 </style>
 </head>
 <body>
@@ -143,6 +150,8 @@
 <main>
   <section class="hero">
     <div class="wrap">
+      <div class="hero-grid">
+        <div>
       <p class="breadcrumb"><a href="index.html">Frío Murcia</a> / Mantenimiento preventivo</p>
       <p class="eyebrow">MANTENIMIENTO PROGRAMADO</p>
       <h1>La mejor avería es la que nunca llega a pasar.</h1>
@@ -153,6 +162,9 @@
           Pedir información
         </a>
         <a class="btn btn-ghost" href="tel:+34600000000">Llamar directamente</a>
+      </div>
+    </div>
+        <div class="hero-photo"><img src="https://picsum.photos/id/1074/800/900" alt="Foto de referencia — pendiente de sustituir por fotografía propia" loading="lazy"><span class="photo-tag">FOTO PROVISIONAL</span></div>
       </div>
     </div>
   </section>
