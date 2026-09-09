@@ -132,6 +132,11 @@
   .icon-badge{width:38px;height:38px;border-radius:8px;background:rgba(11,42,82,0.06);display:inline-flex;align-items:center;justify-content:center;color:var(--alert-dim);margin-bottom:12px;}
   .icon-badge svg{width:20px;height:20px;}
   .hero .icon-badge{background:rgba(1,184,250,0.12);color:var(--cyan);}
+
+  .photo-band{position:relative;height:280px;overflow:hidden;}
+  .photo-band img{width:100%;height:100%;object-fit:cover;display:block;filter:grayscale(.25) brightness(.85);}
+  .photo-band::after{content:'';position:absolute;inset:0;background:linear-gradient(160deg, rgba(11,42,82,.65), rgba(1,184,250,.2));}
+  .photo-band .photo-tag{position:absolute;bottom:12px;left:24px;z-index:2;font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:rgba(255,255,255,.8);background:rgba(0,0,0,.35);padding:3px 8px;border-radius:20px;}
 </style>
 </head>
 <body>
@@ -174,6 +179,8 @@
       <div class="prose"><p>Molina de Segura es, después de la capital, uno de los municipios con más actividad económica de la Región: una ciudad que ha crecido pegada a Murcia capital pero que mantiene su propio tejido industrial y una oferta de hostelería cada vez más amplia, sobre todo en el entorno del Paseo del Malecón y la Alameda, junto al río Segura.</p><p>La combinación de industria agroalimentaria (conserveras, cooperativas hortofrutícolas) y una hostelería en expansión hace que la maquinaria de frío trabaje aquí a un ritmo alto durante todo el año, no solo en verano. Eso significa que una avería en una cámara o un fabricador de hielo puede afectar tanto a un bar del centro como a un obrador que depende del frío para conservar producto a gran escala.</p><p>Por su cercanía a Murcia capital, en Molina de Segura solemos poder tener un técnico en el lugar en poco tiempo, tanto para el casco urbano como para los polígonos industriales cercanos como El Tolmo.</p></div>
     </div>
   </section>
+
+<section class="photo-band"><img src="https://picsum.photos/id/1031/1600/500" alt="Foto de referencia — pendiente de sustituir por fotografía propia" loading="lazy"><span class="photo-tag">FOTO PROVISIONAL</span></section>
 
   <section class="alt">
     <div class="wrap">
