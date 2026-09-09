@@ -5,8 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Avería urgente de frío industrial en Murcia — Frío Murcia</title>
 <meta name="description" content="Reparación urgente de cámaras frigoríficas, fabricadores de hielo, vitrinas y botelleros en toda la Región de Murcia. Contacto directo por WhatsApp.">
-<link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32.png">
-<link rel="icon" type="image/png" sizes="512x512" href="img/favicon-512.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="icon" type="image/png" sizes="512x512" href="favicon-512.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
@@ -71,6 +71,7 @@
   .zone-list{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px;}
   .zone-pill{font-family:'IBM Plex Mono',monospace;font-size:13.5px;border:1px solid #d7e1e5;padding:8px 14px;border-radius:20px;color:var(--ink);text-decoration:none;}
   .zone-pill:hover{border-color:var(--cyan);}
+  .zone-pill.current{background:var(--ink);color:#fff;border-color:var(--ink);}
 
   .faq{border-top:1px solid #e2e8eb;}
   .faq-item{border-bottom:1px solid #e2e8eb;padding:22px 0;}
@@ -103,7 +104,7 @@
 
 <header>
   <div class="wrap nav">
-    <a href="index.html" class="logo-badge" aria-label="Frío Murcia"><img src="img/logo.png" alt="Frío Murcia"></a>
+    <a href="index.html" class="logo-badge" aria-label="Frío Murcia"><img src="logo.png" alt="Frío Murcia"></a>
     <ul class="nav-links">
       <li><a href="index.html#servicios">Servicios</a></li>
       <li><a href="mantenimiento-preventivo.html">Mantenimiento</a></li>
@@ -131,6 +132,19 @@
     </div>
   </section>
 
+  <section>
+    <div class="wrap">
+      <div class="section-head">
+        <p class="section-tag">POR QUÉ FUNCIONA ASÍ</p>
+        <h2>Una red de técnicos, no un único taller</h2>
+      </div>
+      <div class="prose">
+        <p>Cuando una cámara frigorífica, un fabricador de hielo o una vitrina dejan de funcionar en un bar o restaurante de la Región de Murcia, el reloj empieza a correr en serio: el género se pierde en horas, no en días, y muchas veces la avería llega justo el fin de semana o en pleno servicio de mediodía.</p>
+        <p>Por eso planteamos Frío Murcia de forma distinta a un servicio técnico tradicional: en vez de depender de un único taller que puede estar ocupado, de vacaciones o simplemente lejos de tu negocio, trabajamos con una red de técnicos especializados en frío industrial repartidos por toda la Región. Tú nos cuentas qué falla y dónde estás, y nosotros buscamos al técnico disponible más cercano y te confirmamos cuándo puede llegar, sin que tengas que llamar tú mismo a media docena de números mientras el género se te echa a perder.</p>
+      </div>
+    </div>
+  </section>
+
   <section class="machines">
     <div class="wrap">
       <div class="section-head">
@@ -140,8 +154,8 @@
       </div>
       <div class="machine-grid">
         <div class="machine"><h3>Cámaras frigoríficas</h3><p>Industriales y modulares. Pérdida de temperatura, escarcha excesiva, compresor que no arranca. <a href="reparacion-camaras-frigorificas-murcia.html" style="color:var(--alert-dim);font-weight:600;">Ver todos los síntomas →</a></p></div>
-        <div class="machine"><h3>Fabricadores de hielo</h3><p>Máquinas que no producen hielo, producción lenta o hielo de mala calidad.</p></div>
-        <div class="machine"><h3>Vitrinas y expositores refrigerados</h3><p>De pastelería, charcutería y bebidas. Fallos de temperatura o de iluminación interior.</p></div>
+        <div class="machine"><h3>Fabricadores de hielo</h3><p>Máquinas que no producen hielo, producción lenta o hielo de mala calidad. <a href="fabricador-hielo-murcia.html" style="color:var(--alert-dim);font-weight:600;">Ver más →</a></p></div>
+        <div class="machine"><h3>Vitrinas y expositores refrigerados</h3><p>De pastelería, charcutería y bebidas. Fallos de temperatura o de iluminación interior. <a href="vitrinas-expositores-murcia.html" style="color:var(--alert-dim);font-weight:600;">Ver más →</a></p></div>
         <div class="machine"><h3>Botelleros</h3><p>Enfriadores de bebidas y botelleros de barra que dejan de mantener la temperatura.</p></div>
         <div class="machine"><h3>Mostradores para pescadería</h3><p>Bancadas y expositores refrigerados de pescado fresco.</p></div>
         <div class="machine"><h3>Armarios frigoríficos</h3><p>De cocina y de cámara, positivos y negativos.</p></div>
@@ -154,14 +168,14 @@
       <p class="section-tag">DÓNDE LLEGAMOS</p>
       <h2>Cobertura en toda la Región de Murcia</h2>
       <div class="zone-list">
-        <span class="zone-pill">Murcia capital</span>
+        <span class="zone-pill current">Murcia capital</span>
         <a class="zone-pill" href="averia-urgente-cartagena.html">Cartagena</a>
-        <span class="zone-pill">Molina de Segura</span>
-        <span class="zone-pill">Alcantarilla</span>
-        <span class="zone-pill">Cieza</span>
-        <span class="zone-pill">Lorca</span>
-        <span class="zone-pill">Mazarrón</span>
-        <span class="zone-pill">Águilas</span>
+        <a class="zone-pill" href="averia-urgente-molina-de-segura.html">Molina de Segura</a>
+        <a class="zone-pill" href="averia-urgente-alcantarilla.html">Alcantarilla</a>
+        <a class="zone-pill" href="averia-urgente-cieza.html">Cieza</a>
+        <a class="zone-pill" href="averia-urgente-lorca.html">Lorca</a>
+        <a class="zone-pill" href="averia-urgente-mazarron.html">Mazarrón</a>
+        <a class="zone-pill" href="averia-urgente-aguilas.html">Águilas</a><span class="zone-pill">Águilas</span>
       </div>
     </div>
   </section>
@@ -183,6 +197,14 @@
       <div class="faq-item">
         <h3>¿Reparáis todas las marcas?</h3>
         <p>Sí, nuestros técnicos trabajan con maquinaria de las principales marcas del sector hostelero.</p>
+      </div>
+      <div class="faq-item">
+        <h3>¿Puedo pedir factura de la reparación?</h3>
+        <p>Sí, el técnico te entrega factura de todos los trabajos realizados, necesaria además para la garantía de las piezas sustituidas.</p>
+      </div>
+      <div class="faq-item">
+        <h3>¿Qué pasa si la avería no se puede arreglar el mismo día?</h3>
+        <p>Si la pieza necesaria no está disponible al momento, el técnico te informa del plazo estimado y, cuando es posible, te propone una solución provisional para minimizar la pérdida de género.</p>
       </div>
     </div>
   </section>
