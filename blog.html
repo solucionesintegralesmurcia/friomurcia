@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog — Consejos de frío industrial y hostelería — Frío Murcia</title>
+<meta name="description" content="Guías y consejos sobre reparación y mantenimiento de frío industrial y maquinaria de hostelería en la Región de Murcia.">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="icon" type="image/png" sizes="512x512" href="favicon-512.png">
+<link rel="canonical" href="https://friomurcia.es/blog.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#0b2a52; --steel:#163a66; --steel-line:#2c5588; --frost:#eef6fb; --paper:#ffffff;
+    --alert:#ff5a1f; --alert-dim:#c94413; --cyan:#01b8fa;
+    --text-muted:#6d7c87; --text-muted-dark:#9fb0ba; --radius:2px; --maxw:1120px;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;font-family:'IBM Plex Sans',sans-serif;color:var(--ink);background:var(--paper);line-height:1.6;-webkit-font-smoothing:antialiased;}
+  h1,h2,h3{font-family:'Space Grotesk',sans-serif;line-height:1.2;margin:0;letter-spacing:-0.01em;}
+  a{color:inherit;}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px;}
+  header{position:sticky;top:0;z-index:50;background:rgba(11,42,82,0.94);backdrop-filter:blur(6px);border-bottom:1px solid var(--steel-line);}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:64px;}
+  .logo-badge{background:#fff;border-radius:8px;padding:5px 10px;display:inline-flex;align-items:center;line-height:0;}
+  .logo-badge img{height:30px;display:block;}
+  .nav-links{display:none;gap:26px;list-style:none;margin:0;padding:0;}
+  .nav-links a{color:var(--text-muted-dark);text-decoration:none;font-size:14px;font-weight:500;}
+  .nav-links a:hover{color:var(--paper);}
+  @media(min-width:820px){.nav-links{display:flex;}}
+
+  .hero{background:var(--ink);color:var(--paper);padding:56px 0 44px;}
+  .eyebrow{font-family:'IBM Plex Mono',monospace;font-size:12.5px;color:var(--cyan);margin:0 0 14px;}
+  h1{font-size:clamp(28px,4.6vw,40px);font-weight:700;}
+  .hero p{color:var(--text-muted-dark);font-size:16.5px;max-width:56ch;margin:16px 0 0;}
+
+  .posts{padding:48px 0 64px;}
+  .post-list{display:grid;grid-template-columns:1fr;gap:0;border-top:1px solid #e2e8eb;}
+  .post{border-bottom:1px solid #e2e8eb;padding:28px 0;display:block;text-decoration:none;color:var(--ink);}
+  .post-tag{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--alert-dim);font-weight:600;}
+  .post h2{font-size:21px;margin:10px 0 8px;}
+  .post p{color:var(--text-muted);font-size:15px;margin:0;}
+  .post:hover h2{color:var(--alert-dim);}
+
+  footer{background:#081b33;color:var(--text-muted-dark);padding:26px 0;font-size:13px;}
+  footer .wrap{display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;align-items:center;}
+  footer a{color:var(--text-muted-dark);text-decoration:none;}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a href="index.html" class="logo-badge" aria-label="Frío Murcia"><img src="logo.png" alt="Frío Murcia"></a>
+    <ul class="nav-links">
+      <li><a href="averia-urgente.html">Avería urgente</a></li>
+      <li><a href="mantenimiento-preventivo.html">Mantenimiento</a></li>
+      <li><a href="index.html#contacto">Contacto</a></li>
+    </ul>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <p class="eyebrow">BLOG</p>
+    <h1>Consejos de frío industrial y hostelería</h1>
+    <p>Guías prácticas para entender tu maquinaria, evitar averías y saber a qué atenerte antes de llamar a un técnico.</p>
+  </div>
+</section>
+
+<section class="posts">
+  <div class="wrap">
+    <div class="post-list">
+      <a class="post" href="cuanto-cuesta-reparar-camara-frigorifica-murcia.html">
+        <span class="post-tag">PRECIOS Y PRESUPUESTOS</span>
+        <h2>¿Cuánto cuesta reparar una cámara frigorífica en Murcia?</h2>
+        <p>Qué factores mueven el precio y cómo evitar sorpresas en la factura.</p>
+      </a>
+      <a class="post" href="maquina-cafe-no-calienta-que-hacer.html">
+        <span class="post-tag">GUÍAS RÁPIDAS</span>
+        <h2>Mi máquina de café no calienta: qué comprobar antes de llamar al técnico</h2>
+        <p>Cuatro comprobaciones que puedes hacer tú mismo en dos minutos.</p>
+      </a>
+      <a class="post" href="cada-cuanto-revisar-camara-frigorifica.html">
+        <span class="post-tag">MANTENIMIENTO</span>
+        <h2>¿Cada cuánto hay que revisar una cámara frigorífica?</h2>
+        <p>Frecuencia recomendada según el uso, y qué revisa un técnico en cada visita.</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>© <span id="year"></span> Frío Murcia</span>
+    <a href="https://tuwebmurcia.es" target="_blank" rel="noopener">Un proyecto de tuwebmurcia.es</a>
+  </div>
+</footer>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
